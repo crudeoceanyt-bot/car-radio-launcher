@@ -5,18 +5,18 @@ package com.eduard.crvlauncher
  * first installed package in its list is launched.
  */
 object Config {
-    const val DRIVER_NAME = "Eduard"
+    const val DRIVER_NAME = "Santiago"
 
     /**
      * Cities the weather can be pinned to (tap the weather to cycle).
      * "Automático" uses the unit's GPS and falls back to the first city.
      */
     val CITIES = listOf(
-        City("Tegucigalpa", 14.0723, -87.1921),
-        City("San Pedro Sula", 15.5042, -88.0250),
-        City("Puerto Cortés", 15.8500, -87.9400),
-        City("Santa Rosa de Copán", 14.7667, -88.7833),
-    )
+    City("Veracruz", 19.1738, -96.1342),
+    City("Boca del Río", 19.1046, -96.1047),
+    City("Medellín de Bravo", 19.0580, -96.1570),
+    City("Xalapa", 19.5438, -96.9102),
+)
 
     // Real packages read from the unit over ADB (Jancar firmware on AutoChips AC8227L, Android 8.1).
     val NAVIGATION = listOf(
