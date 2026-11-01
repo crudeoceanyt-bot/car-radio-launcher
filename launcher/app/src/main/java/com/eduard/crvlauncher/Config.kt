@@ -12,11 +12,11 @@ object Config {
      * "Automático" uses the unit's GPS and falls back to the first city.
      */
     val CITIES = listOf(
-    City("Veracruz", 19.1738, -96.1342),
-    City("Boca del Río", 19.1046, -96.1047),
-    City("Medellín de Bravo", 19.0580, -96.1570),
-    City("Xalapa", 19.5438, -96.9102),
-)
+        City("Veracruz", 19.1738, -96.1342),
+        City("Boca del Río", 19.1046, -96.1047),
+        City("Medellín de Bravo", 19.0580, -96.1570),
+        City("Xalapa", 19.5438, -96.9102),
+    )
 
     // Real packages read from the unit over ADB (Jancar firmware on AutoChips AC8227L, Android 8.1).
     val NAVIGATION = listOf(
@@ -34,6 +34,11 @@ object Config {
     /** Media sessions that mean "music from the phone over Bluetooth". */
     val BLUETOOTH_MEDIA_SOURCES = setOf("com.android.bluetooth", "com.jancar.music", "com.jancar.bluetooth")
     val CARPLAY = listOf("com.autochips.carplayapp", "com.autoai.car.jlink")
+
+    /** Botón Ecualizador: apps del estéreo. Vacía = abre el panel de audio de Android. */
+    val EQUALIZER: List<String> = emptyList()
+    /** Botón Bluetooth: app del estéreo; si no está instalada abre los ajustes de Bluetooth de Android. */
+    val BLUETOOTH: List<String> = listOf("com.jancar.bluetooth")
 }
 
 data class City(val name: String, val lat: Double, val lon: Double)
